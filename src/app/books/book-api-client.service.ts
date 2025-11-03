@@ -5,18 +5,18 @@ import { Book } from './book';
 
 @Injectable({ providedIn: 'root' })
 export class BookApiClient {
-  private readonly apiUrl = 'http://localhost:4730/books';
+    private readonly apiUrl = 'http://localhost:4730/books';
 
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) {}
 
-  getBooks(pageSize: number = 10, searchTerm?: string): Observable<Book[]> {
-    let params = new HttpParams().set('_limit', pageSize.toString());
+    getBooks(pageSize: number = 10, searchTerm?: string): Observable<Book[]> {
+        let params = new HttpParams().set('_limit', pageSize.toString());
 
-    if (searchTerm) {
-      // Search in title and author fields
-      params = params.set('q', searchTerm);
+        if (searchTerm) {
+            // Search in title and author fields
+            params = params.set('q', searchTerm);
+        }
+
+        return this.http.get<Book[]>(this.apiUrl, { params });
     }
-
-    return this.http.get<Book[]>(this.apiUrl, { params });
-  }
 }

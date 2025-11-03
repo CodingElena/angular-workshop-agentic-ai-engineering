@@ -1,17 +1,17 @@
 {
-  "overrides": [
-    {
-      "files": "*.html",
-      "options": { "parser": "angular" }
-    }
-  ],
-  "printWidth": 120,
-  "tabWidth": 2,
-  "useTabs": false,
-  "singleQuote": true,
-  "trailingComma": "none",
-  "arrowParens": "avoid",
-  "semi": true,
-  "bracketSpacing": true,
-  "endOfLine": "lf"
+    "overrides": [
+        {
+            "files": "*.html",
+            "options": { "parser": "angular" }
+        }
+    ],
+    "printWidth": 120,
+    "tabWidth": 4,
+    "useTabs": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "arrowParens": "avoid",
+    "semi": true,
+    "bracketSpacing": true,
+    "endOfLine": "lf"
 }

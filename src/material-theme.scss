@@ -1,9 +1,9 @@
 @use '@angular/material' as mat;
 
 :root {
-  @include mat.snack-bar-overrides(
-    (
-      container-color: #f4f4f4
-    )
-  );
+    @include mat.snack-bar-overrides(
+        (
+            container-color: #f4f4f4
+        )
+    );
 }
