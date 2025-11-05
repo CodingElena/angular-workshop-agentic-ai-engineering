@@ -1,19 +1,20 @@
-<div
-    class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
+<a
+    [routerLink]="['/books', book.id]"
+    class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full cursor-pointer group"
 >
-    <div class="relative aspect-[3/4] overflow-hidden">
+    <div class="relative aspect-[3/4] overflow-hidden bg-gray-100 group-hover:opacity-90 transition-opacity duration-300">
         <img
             *ngIf="book.cover"
             [src]="book.cover"
             [alt]="book.title"
-            class="w-full h-full object-contain bg-gray-100"
+            class="w-full h-full object-contain"
         />
-        <div *ngIf="!book.cover" class="w-full h-full bg-gray-100 flex items-center justify-center">
+        <div *ngIf="!book.cover" class="w-full h-full flex items-center justify-center">
             <span class="text-gray-500 text-sm font-medium">No cover available</span>
         </div>
     </div>
     <div class="p-5 flex flex-col flex-grow">
-        <h2 class="text-lg font-semibold text-gray-800 mb-1 line-clamp-2">{{ book.title }}</h2>
+        <h2 class="text-lg font-semibold text-gray-800 mb-1 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">{{ book.title }}</h2>
         <p *ngIf="book.subtitle" class="text-sm text-gray-600 mb-2 line-clamp-2">{{ book.subtitle }}</p>
         <div class="text-sm text-gray-700 mt-auto">
             <p>
@@ -22,6 +23,6 @@
             <p *ngIf="book.isbn" class="text-xs text-gray-500 mt-2">ISBN: {{ book.isbn }}</p>
         </div>
     </div>
-</div>
+</a>
 
 
