@@ -38,3 +38,9 @@ We added a few plugin recommendations to simplify writing code during the worksh
 
 1. Angular Language Service - Adds better syntax-highlighting & automatic refactorings
 1. Prettier - Formats your code automatically in the same way across your project.
+
+## AI-generated Docs
+
+For a concise overview of the technology stack and dependencies used in this project, see:
+
+- [AI Readme: Technology Stack and Dependencies](./ai-readme.md)
